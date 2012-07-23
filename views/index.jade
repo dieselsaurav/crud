@@ -1,5 +1,16 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
+	.container
+		h1= title
+		p Welcome to #{title}
+		a.btn.btn-primary(data-toggle="modal", href="#myModal") Lauch Modal
+		#myModal.modal.hide.fade
+			.modal-header
+				button.close(type="button", data-dismiss="modal") x
+				h3 Modal Header
+			.modal-body
+				p One fine body...
+			.modal-footer
+				a.btn(href="#", data-dismiss="modal") Close
+				a.btn.btn-primary(href="#") Save changes
